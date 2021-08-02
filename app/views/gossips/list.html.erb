@@ -1,0 +1,5 @@
+<h1>Le thé est chaud!</h1>
+<p><% gossip = Gossip.find(params[:gossip_id]) %>
+     <%= User.find(gossip.user_id).first_name %> a écrit le gossip numéro <%= params[:gossip_id] %> : <%= gossip.title%>
+    <%= gossip.content%>
+</p>
