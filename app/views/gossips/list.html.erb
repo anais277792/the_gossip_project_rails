@@ -2,4 +2,5 @@
 <p><% gossip = Gossip.find(params[:gossip_id]) %>
      <%= User.find(gossip.user_id).first_name %> a écrit le gossip numéro <%= params[:gossip_id] %> : <%= gossip.title%>
     <%= gossip.content%>
+    <%= link_to User.find(gossip.user_id).first_name, users_id_path(gossip.user_id),class: 'btn btn-primary' %>
 </p>

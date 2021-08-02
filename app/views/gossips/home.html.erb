@@ -5,6 +5,7 @@
         <br/>
        écrit par:  <%= User.find(gossip.user_id).first_name%>
         <br/>
+        <%= link_to "voir plus", gossip_id_path(gossip.id),class: 'link-dark' %>
     <%end%>
 
 </p>
